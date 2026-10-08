@@ -1,0 +1,7 @@
+package com.example.matriculacion.repository;
+import com.example.matriculacion.entity.Materia;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.Optional;
+public interface MateriaRepository extends JpaRepository<Materia, Long> {
+    Optional<Materia> findByCodigo(String codigo);
+}
